@@ -107,6 +107,7 @@ article {
   max-width: 37.5rem;
   background-color: var(--white);
   padding: 1.5rem;
+  padding-bottom: 0rem;
   margin: 0 auto;
   border-radius: .5rem;
 }
@@ -153,6 +154,7 @@ h2:has([class*="panel-control-"][aria-expanded="false"]){
     margin-bottom: 2rem;
   }
   article {
-    padding: 2.5rem
+    padding: 2.5rem;
+    padding-bottom: 0.1rem
   }
 }
