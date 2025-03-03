@@ -1,0 +1,158 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+  --pink: hsl(281, 83%, 54%);
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url('/assets/fonts/static/WorkSans-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/assets/fonts/static/WorkSans-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/assets/fonts/static/WorkSans-Regular.ttf');
+  font-weight: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans';
+}
+
+h1 {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 1.5rem 0;
+}
+
+img.bg {
+  display: block;
+  width: 100%;
+  margin-bottom: -8rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-items: center;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  text-align: left;
+  padding: 1rem 0;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+
+button:hover {
+  color: var(--pink);
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-family: 'Work Sans';
+  font-weight: 600;
+}
+
+p {
+  color: var(--grayish-purple);
+}
+
+main {
+  place-self: center;
+  background-color: var(--light-pink);
+  min-height: 100svh;
+}
+
+hr {
+  /* margin: 1.5rem 0; */
+  border-color: var(--light-pink);
+  border-top: 0.0625rem;
+}
+
+article {
+  max-width: 37.5rem;
+  background-color: var(--white);
+  padding: 1.5rem;
+  margin: 0 auto;
+  border-radius: .5rem;
+}
+
+.article-wrapper {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+[class*="panel-control-"][aria-expanded="true"] > .hidden {
+  display: block;
+}
+
+[class*="panel-control-"][aria-expanded="true"] > .visible {
+  display: none;
+}
+
+h2:has([class*="panel-control-"][aria-expanded="false"]) + [id*="panel-"]  {
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+h2:has([class*="panel-control-"][aria-expanded="false"]){
+ margin-bottom: 0;
+}
+
+@media (min-width: 675px) {
+
+  img.bg {
+    margin-bottom: -10.75rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  article {
+    padding: 2.5rem
+  }
+}
