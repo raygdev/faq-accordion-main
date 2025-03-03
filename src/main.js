@@ -20,6 +20,14 @@ panelButtons.forEach((button, i) => {
         if(e.key === 'ArrowDown' && i < panelButtons.length - 1) {
             panelButtons[i + 1].focus()
         }
+
+        if(e.key === 'Home') {
+            panelButtons[0].focus()
+        }
+
+        if(e.key === 'End') {
+            panelButtons[panelButtons.length - 1].focus()
+        }
     })
 })
 
